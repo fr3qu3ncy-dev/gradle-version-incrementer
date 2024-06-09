@@ -16,13 +16,9 @@ try {
   // Increment oldNumber
   const newNumber = oldNumber + 1;
 
-  const newVersion = "beta-" + newNumber;
-
   console.log("Set new number: " + newNumber);
 
-  core.setOutput("new_version", newNumber);
-
-  console.log(`Set new version to: ${newVersion}`);
+  core.setOutput("new_number", newNumber);
 } catch (error) {
   core.setFailed(error.message);
 }
