@@ -1,11 +1,8 @@
 const core = require('@actions/core');
-const execSync = require('child_process').execSync;
 
 try {
-  const actualVersion = core.getInput('actual_version');
   const latestRelease = core.getInput('latest_release');
 
-  console.log(`Actual version: ${actualVersion}`);
   console.log(`Latest release: ${latestRelease}`);
 
   // Get number after last "-" in latestRelease and parse it to int
@@ -19,9 +16,9 @@ try {
   // Increment oldNumber
   const newNumber = oldNumber + 1;
 
-  const newVersion = actualVersion + "-beta-" + newNumber;
+  const newVersion = "beta-" + newNumber;
 
-  console.log(output.toString());
+  console.log(newVersion.toString());
 
   core.setOutput("new_version", newVersion);
 
