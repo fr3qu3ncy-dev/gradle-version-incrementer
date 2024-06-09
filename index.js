@@ -18,7 +18,7 @@ try {
 
   console.log("Set new number: " + newNumber);
 
-  core.setOutput("new_number", newNumber);
+  core.setOutput("new_number", "random-shit");
 } catch (error) {
   core.setFailed(error.message);
 }
