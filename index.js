@@ -18,9 +18,9 @@ try {
 
   const newVersion = "beta-" + newNumber;
 
-  console.log(newVersion.toString());
+  console.log("Set new number: " + newNumber);
 
-  core.setOutput("new_version", newVersion);
+  core.setOutput("new_version", newNumber);
 
   console.log(`Set new version to: ${newVersion}`);
 } catch (error) {
